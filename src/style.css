@@ -1,0 +1,420 @@
+:root {
+  --darkGray: hsl(0, 0%, 63%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --veryDarkGray: hsl(0, 0%, 27%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  font-size: 62.5%;
+  color: var(--black);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  max-width: 100vw;
+  position: relative;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  height: 1.5rem;
+  margin: 3%;
+}
+
+.navBar {
+  display: flex;
+  gap: 3rem;
+}
+
+.navBar > a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: var(--white);
+  text-transform: lowercase;
+}
+
+.navBar > a:hover::after {
+  content: "";
+  display: block;
+  border-bottom: 0.2rem solid var(--white);
+  border-radius: 0.1rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.firstSection {
+  display: flex;
+  height: 70dvh;
+  width: 100%;
+}
+
+.nav__ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__item {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.firstAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  gap: 0.7rem;
+  width: 50%;
+  padding: 10% 8% 15% 7%;
+}
+
+.first__image {
+  min-height: 20rem;
+  width: 60%;
+  object-fit: cover;
+}
+
+.first__title {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -0.2rem;
+  line-height: 4.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.first__text {
+  font-size: 1.7rem;
+  color: var(--darkGray);
+}
+
+.first__shop {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.8rem;
+}
+
+.first__shop:hover span {
+  color: var(--darkGray);
+  fill: var(--darkGray);
+}
+
+.first__shop:hover svg {
+  fill: var(--darkGray);
+}
+
+.first__shop > svg {
+  height: 2rem;
+  width: 10rem;
+}
+
+.first__button {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 12rem;
+  height: 15%;
+  border-radius: 0.1rem;
+  overflow: hidden;
+}
+
+.first__buttonContainer {
+  display: none;
+}
+
+.first__button > button {
+  background-color: var(--black);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.first__button > button:hover {
+  background-color: var(--veryDarkGray);
+}
+
+.lastSection {
+  height: 30dvh;
+  display: flex;
+}
+
+.lastArticle {
+  font-size: 2rem;
+}
+
+.second__image {
+  width: 25%;
+  object-fit: cover;
+}
+
+.lastArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 5% 5%;
+}
+
+.last__about {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  letter-spacing: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.last__desc {
+  font-size: 1.7rem;
+  color: var(--darkGray);
+  margin-bottom: 0;
+}
+
+.third__image {
+  width: 25%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  * {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #trySection {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 5%;
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  .hamburgerMenu {
+    display: none;
+    left: 5%;
+    top: 0;
+    position: absolute;
+  }
+
+  .logoImage {
+    margin-top: 0.1rem;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+  .firstSection {
+    flex-direction: column;
+  }
+
+  .first__buttonContainer {
+    background-image: url(/public/images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    background-position: center;
+    flex: 1;
+  }
+
+  .first__button-mobile {
+    display: flex;
+    width: 12rem;
+    height: 6rem;
+    border-radius: 0.1rem;
+    overflow: hidden;
+  }
+
+  .first__button-mobile > button {
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .imageButtonMobile {
+    height: 1.5rem;
+    width: 1.1rem;
+  }
+
+  .firstAside {
+    width: unset;
+    margin-top: 1rem;
+  }
+
+  .lastSection {
+    flex-direction: column;
+  }
+
+  .first__image {
+    display: none;
+  }
+
+  .first__button {
+    display: none;
+  }
+
+  .lastSection {
+    height: 100%;
+  }
+
+  .second__image {
+    width: 100%;
+  }
+
+  .lastArticle {
+    margin: 4rem auto;
+    width: 100%;
+  }
+
+  .third__image {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #trySection {
+    display: none;
+  }
+}
+
+#trySection {
+  height: 100dvh;
+  background-color: #232323;
+  color: #cdcdcd;
+}
+
+#menuToggle {
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  user-select: none;
+  height: 100dvh;
+  z-index: 1;
+}
+
+#menuToggle input {
+  opacity: 0;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  height: 3rem;
+  width: 4rem;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: block;
+  position: relative;
+  background-color: var(--white);
+  height: 0.3rem;
+  width: 3rem;
+  border-radius: 0.3rem;
+  transform-origin: 0.4rem 0;
+  margin-bottom: 0.4rem;
+  transition: transform 0.5s cubic-bezier(0.92, 0.46, 0.07, 0.92),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  z-index: 1;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0.3rem, 0.3rem);
+  background-color: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 1;
+  transform: rotate(0deg) scale(0, 0);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(-0.5rem, 0.2rem);
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  list-style-type: none;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: -5rem;
+  padding: 0 0 0 2%;
+  background-color: #ededed;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 3rem 0;
+  font-size: 1.7rem;
+}
+
+#menu a {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+}
+
+footer p {
+  font-size: 2rem;
+  padding: 0 2%;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 2rem;
+  animation: modify 1s linear infinite alternate both;
+}
+
+@keyframes modify {
+  from {
+    color: var(--veryDarkGray);
+  }
+  to {
+    color: var(--darkGray);
+  }
+}
